@@ -44,12 +44,20 @@
         <a href="about.html"           class="navbar__link">About us</a>
         <a href="revolution-voice.html" class="navbar__link">Revolution Voice</a>
         <a href="blog.html"            class="navbar__link">Blog</a>
+        <a href="contact.html"         class="navbar__link navbar__link--mobile">Contact Us</a>
       </nav>
 
       <!-- CTA -->
       <div class="navbar__cta">
         <a href="contact.html" class="btn btn--primary">Contact Us</a>
       </div>
+
+      <!-- Hamburger menu -->
+      <button class="navbar__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
     </div>
   </header>
@@ -289,6 +297,15 @@
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 10);
     }, { passive: true });
+
+    /* ── Hamburger menu toggle ── */
+    const hamburger = document.querySelector('.navbar__hamburger');
+    const nav = document.querySelector('.navbar__nav');
+    hamburger.addEventListener('click', () => {
+      const isOpen = nav.classList.contains('navbar__nav--open');
+      nav.classList.toggle('navbar__nav--open', !isOpen);
+      hamburger.setAttribute('aria-expanded', !isOpen);
+    });
 
     /* ── Scroll-reveal for cards ── */
     const observer = new IntersectionObserver((entries) => {

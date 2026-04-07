@@ -41,7 +41,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
-  max-width: 800px;
+  max-width: 980px;
   text-align: center;
 }
 
@@ -57,7 +57,6 @@
 
   /* entrance animation */
   animation: heroIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-  white-space: nowrap;
 }
 
 @keyframes heroIn {
@@ -68,7 +67,7 @@
 /* ── Intro strip (navy bar behind hero) ── */
 .intro-strip {
   background: var(--color-navy-bg);
-  height: 535px;
+  height: clamp(480px, 55vw, 713px);
   position: absolute;
   top: var(--nav-height);
   left: 0; right: 0;
@@ -153,5 +152,9 @@
 
   .hero__headline {
     font-size: clamp(28px, 8vw, 42px);
+  }
+
+  .intro-strip {
+    display: none;
   }
 }

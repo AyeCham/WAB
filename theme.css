@@ -67,6 +67,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -187,6 +188,30 @@ ul, ol { list-style: none; }
 .navbar__cta {
   margin-left: auto;
   flex-shrink: 0;
+}
+
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: auto;
+}
+
+.navbar__hamburger span {
+  width: 24px;
+  height: 2px;
+  background: var(--color-ink);
+  transition: all var(--transition-fast);
+}
+
+.navbar__link--mobile {
+  display: none;
 }
 
 /* ── Button Component ── */
@@ -423,7 +448,43 @@ ul, ol { list-style: none; }
 @media (max-width: 768px) {
   :root { --nav-height: 72px; }
 
-  .navbar__nav { display: none; }
+  .navbar__hamburger { display: flex; }
+
+  .navbar__cta { display: none; }
+
+  .navbar__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--color-white);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 16px 0;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+  }
+
+  .navbar__nav.navbar__nav--open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .navbar__link {
+    padding: 12px var(--gutter);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar__link:last-child {
+    border-bottom: none;
+  }
+
+  .navbar__link--mobile { display: block; }
 
   .grid-3 {
     grid-template-columns: 1fr;
@@ -436,6 +497,12 @@ ul, ol { list-style: none; }
   .footer__bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__headline {
+    font-size: 28px;
   }
 }
 
