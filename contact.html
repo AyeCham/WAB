@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
     rel="stylesheet"
   />
 
@@ -68,83 +68,240 @@
       </div>
     </section>
 
-    <!-- ── CONTACT FORM ── -->
+    <!-- ── CONTACT SECTION ── -->
     <section class="contact-section reveal" aria-labelledby="contact-heading">
       <div class="contact-section__inner">
 
-        <h2 id="contact-heading" class="contact-heading">Contact Us</h2>
-        <p class="contact-subheading">
-          Have a question, want to collaborate, or need to get in touch?
-          Send us a message and we'll get back to you.
+        <h2 id="contact-heading" class="contact-section__heading">Contact Us</h2>
+        <p class="contact-section__subheading">Any question or remarks? Just write us a message!</p>
+
+        <!-- Card: info panel + form -->
+        <div class="contact-card">
+
+          <!-- Left: contact info -->
+          <aside class="contact-info" aria-label="Contact information">
+            <h3 class="contact-info__title">Contact Information</h3>
+            <p class="contact-info__tagline">Say something to start a live chat!</p>
+
+            <ul class="contact-info__list" role="list">
+
+              <!-- Phone -->
+              <li class="contact-info__item">
+                <svg class="contact-info__icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.7A2 2 0 012 .18h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.09-1.09a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/>
+                </svg>
+                <span class="contact-info__text">+1012 3456 789</span>
+              </li>
+
+              <!-- Email -->
+              <li class="contact-info__item">
+                <svg class="contact-info__icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                  <polyline points="22,6 12,13 2,6"/>
+                </svg>
+                <span class="contact-info__text">demo@gmail.com</span>
+              </li>
+
+              <!-- Address -->
+              <li class="contact-info__item">
+                <svg class="contact-info__icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
+                <span class="contact-info__text">
+                  132 Dartmouth Street Boston,<br>
+                  Massachusetts 02156 United States
+                </span>
+              </li>
+
+            </ul>
+
+            <!-- Social icons -->
+            <div class="contact-info__socials" aria-label="Social media">
+              <a href="https://twitter.com"   class="contact-info__social-btn contact-info__social-btn--dark"  aria-label="Twitter"   target="_blank" rel="noopener">𝕏</a>
+              <a href="https://instagram.com" class="contact-info__social-btn contact-info__social-btn--light" aria-label="Instagram" target="_blank" rel="noopener">⊙</a>
+              <a href="https://discord.com"   class="contact-info__social-btn contact-info__social-btn--dark"  aria-label="Discord"   target="_blank" rel="noopener">d</a>
+            </div>
+          </aside>
+
+          <!-- Right: form -->
+          <div class="contact-form-panel">
+            <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
+
+              <!-- Row 1: First Name + Last Name -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="first-name">First Name</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="first-name"
+                    name="first_name"
+                    placeholder="John"
+                    required
+                    autocomplete="given-name"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="last-name">Last Name</label>
+                  <input
+                    class="form-input"
+                    type="text"
+                    id="last-name"
+                    name="last_name"
+                    placeholder="Doe"
+                    required
+                    autocomplete="family-name"
+                  />
+                </div>
+              </div>
+
+              <!-- Row 2: Email + Phone -->
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="contact-email">Email</label>
+                  <input
+                    class="form-input"
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    placeholder="your@email.com"
+                    required
+                    autocomplete="email"
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="contact-phone">Phone Number</label>
+                  <input
+                    class="form-input"
+                    type="tel"
+                    id="contact-phone"
+                    name="phone"
+                    placeholder="+1 012 3456 789"
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+
+              <!-- Subject radio group -->
+              <div class="form-subject" role="group" aria-labelledby="subject-label">
+                <span id="subject-label" class="form-subject__label">Select Subject?</span>
+                <div class="subject-options">
+                  <label class="subject-option">
+                    <input type="radio" name="subject" value="general" checked />
+                    General Inquiry
+                  </label>
+                  <label class="subject-option">
+                    <input type="radio" name="subject" value="donation" />
+                    Donation
+                  </label>
+                  <label class="subject-option">
+                    <input type="radio" name="subject" value="volunteer" />
+                    Volunteer
+                  </label>
+                  <label class="subject-option">
+                    <input type="radio" name="subject" value="partnership" />
+                    Partnership
+                  </label>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="form-field">
+                <label for="contact-message">Message</label>
+                <textarea
+                  class="form-textarea"
+                  id="contact-message"
+                  name="message"
+                  placeholder="Write your message.."
+                  required
+                  rows="4"
+                ></textarea>
+              </div>
+
+              <!-- Feedback -->
+              <div class="form-message" id="formMessage" role="alert" aria-live="polite"></div>
+
+              <!-- Submit -->
+              <div class="form-submit-row">
+                <button type="submit" class="form-submit">Send Message</button>
+              </div>
+
+            </form>
+          </div><!-- /.contact-form-panel -->
+
+        </div><!-- /.contact-card -->
+      </div>
+    </section>
+
+    <!-- ── FAQ SECTION ── -->
+    <section class="faq-section reveal" aria-labelledby="faq-heading">
+      <div class="faq-section__inner">
+
+        <h2 id="faq-heading" class="faq-section__heading">FAQs</h2>
+        <p class="faq-section__subheading">
+          Find helpful answers to common questions about donating, volunteering &amp; fundraising.
         </p>
 
-        <form
-          class="contact-form"
-          id="contactForm"
-          novalidate
-          aria-label="Contact form"
-        >
-          <!-- Name -->
-          <div class="form-field">
-            <label for="contact-name">Full Name</label>
-            <input
-              class="form-input"
-              type="text"
-              id="contact-name"
-              name="name"
-              placeholder="Your full name"
-              required
-              autocomplete="name"
-            />
-          </div>
+        <ul class="faq-list" role="list">
 
-          <!-- Email -->
-          <div class="form-field">
-            <label for="contact-email">Email Address</label>
-            <input
-              class="form-input"
-              type="email"
-              id="contact-email"
-              name="email"
-              placeholder="your@email.com"
-              required
-              autocomplete="email"
-            />
-          </div>
+          <li class="faq-item">
+            <button class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">What is your's NGO mission?</span>
+              <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-item__answer" hidden>
+              <div class="faq-item__answer-inner">
+                Women Alliance Burma's mission is to strengthen women's participation in the Spring Revolution and to advocate for women's leadership and rights in building a future federal democratic union in Myanmar.
+              </div>
+            </div>
+          </li>
 
-          <!-- Subject -->
-          <div class="form-field">
-            <label for="contact-subject">Subject</label>
-            <input
-              class="form-input"
-              type="text"
-              id="contact-subject"
-              name="subject"
-              placeholder="What is this about?"
-              required
-            />
-          </div>
+          <li class="faq-item">
+            <button class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">How are donations used?</span>
+              <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-item__answer" hidden>
+              <div class="faq-item__answer-inner">
+                All donations go directly toward supporting women activists, funding awareness campaigns, providing emergency relief, and organizing community programs that advance gender equality and democratic values in Myanmar.
+              </div>
+            </div>
+          </li>
 
-          <!-- Message -->
-          <div class="form-field">
-            <label for="contact-message">Message</label>
-            <textarea
-              class="form-textarea"
-              id="contact-message"
-              name="message"
-              placeholder="Write your message here…"
-              required
-              rows="4"
-            ></textarea>
-          </div>
+          <li class="faq-item">
+            <button class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">Can I volunteer?</span>
+              <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-item__answer" hidden>
+              <div class="faq-item__answer-inner">
+                Yes! We welcome volunteers who share our commitment to justice and equality. Please use the contact form above to get in touch and tell us how you'd like to help.
+              </div>
+            </div>
+          </li>
 
-          <!-- Submit -->
-          <button type="submit" class="form-submit">Send Message</button>
+          <li class="faq-item">
+            <button class="faq-item__btn" aria-expanded="false">
+              <span class="faq-item__question">Beside donating, how else can I help?</span>
+              <svg class="faq-item__chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="faq-item__answer" hidden>
+              <div class="faq-item__answer-inner">
+                You can help by raising awareness on social media, sharing our stories and campaigns, inviting friends to join our community, partnering with us as an organization, or attending our events and fundraisers.
+              </div>
+            </div>
+          </li>
 
-          <!-- Feedback message -->
-          <div class="form-message" id="formMessage" role="alert" aria-live="polite"></div>
-        </form>
-
+        </ul>
       </div>
     </section>
 
@@ -221,16 +378,38 @@
     }, { passive: true });
 
     /* ── Scroll-reveal ── */
-    const observer = new IntersectionObserver((entries) => {
+    const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
+          revealObserver.unobserve(entry.target);
         }
       });
     }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    /* ── FAQ accordion ── */
+    document.querySelectorAll('.faq-item__btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item   = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-item__answer');
+        const isOpen = item.classList.contains('open');
+
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => {
+          i.classList.remove('open');
+          i.querySelector('.faq-item__btn').setAttribute('aria-expanded', 'false');
+          i.querySelector('.faq-item__answer').hidden = true;
+        });
+
+        // Open clicked (toggle)
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          answer.hidden = false;
+        }
+      });
+    });
 
     /* ── Form submission ── */
     const form = document.getElementById('contactForm');
@@ -239,14 +418,13 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
-      // Basic client-side validation
-      const name    = form.querySelector('#contact-name').value.trim();
-      const email   = form.querySelector('#contact-email').value.trim();
-      const subject = form.querySelector('#contact-subject').value.trim();
-      const message = form.querySelector('#contact-message').value.trim();
+      const firstName = form.querySelector('#first-name').value.trim();
+      const lastName  = form.querySelector('#last-name').value.trim();
+      const email     = form.querySelector('#contact-email').value.trim();
+      const message   = form.querySelector('#contact-message').value.trim();
 
-      if (!name || !email || !subject || !message) {
-        showMessage('Please fill in all fields before sending.', 'error');
+      if (!firstName || !lastName || !email || !message) {
+        showMessage('Please fill in all required fields.', 'error');
         return;
       }
 
@@ -256,17 +434,16 @@
         return;
       }
 
-      // Replace this block with your actual form submission logic (fetch, FormData, etc.)
       const submitBtn = form.querySelector('.form-submit');
       submitBtn.disabled = true;
       submitBtn.textContent = 'Sending…';
 
-      // Simulate async send (remove this timeout and add real fetch call)
+      // Replace with your real fetch/POST call
       setTimeout(() => {
         form.reset();
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send Message';
-        showMessage('Thank you! Your message has been sent. We will get back to you soon.', 'success');
+        showMessage('Thank you! Your message has been sent. We\'ll get back to you soon.', 'success');
       }, 1200);
     });
 

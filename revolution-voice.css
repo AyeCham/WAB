@@ -54,6 +54,7 @@
   letter-spacing: 0.02em;
   text-shadow: 0 4px 32px rgba(0,0,0,0.50);
   animation: heroIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+  white-space: nowrap;
 }
 
 @keyframes heroIn {
