@@ -1,0 +1,256 @@
+/* ============================================
+   CONTACT PAGE STYLES — contact.css
+   Requires theme.css to be loaded first.
+   ============================================ */
+
+/* ════════════════════════════════════
+   HERO  (identical to other pages)
+════════════════════════════════════ */
+.hero {
+  position: relative;
+  width: 100%;
+  height: clamp(480px, 55vw, 713px);
+  overflow: hidden;
+  background: #1a0505;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(0.75);
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(180, 60, 0, 0.30) 0%,
+    rgba(20, 5, 5, 0.55) 100%
+  );
+}
+
+.hero__content {
+  position: absolute;
+  bottom: clamp(40px, 8%, 100px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  line-height: 1.21;
+  letter-spacing: 0.02em;
+  text-shadow: 0 4px 32px rgba(0,0,0,0.50);
+  animation: heroIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ════════════════════════════════════
+   CONTACT SECTION
+════════════════════════════════════ */
+.contact-section {
+  padding-block: var(--section-gap);
+}
+
+.contact-section__inner {
+  max-width: 700px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Heading ── */
+.contact-heading {
+  font-family: var(--font-body);
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 600;
+  color: var(--color-crimson);
+  line-height: 1.5;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.contact-subheading {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.4vw, 18px);
+  font-weight: 500;
+  color: var(--color-muted);
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: clamp(32px, 4vw, 48px);
+  max-width: 520px;
+}
+
+/* ════════════════════════════════════
+   CONTACT FORM
+════════════════════════════════════ */
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ── Field wrapper ── */
+.form-field {
+  width: 100%;
+}
+
+.form-field label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin-bottom: 6px;
+  padding-left: 4px;
+}
+
+/* ── Input / Textarea base ── */
+.form-input,
+.form-textarea {
+  width: 100%;
+  background: rgba(217, 217, 217, 0.76);
+  border: 2px solid transparent;
+  border-radius: 11px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--color-ink);
+  outline: none;
+  transition: background var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-input {
+  height: 101px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  /* vertically center the text */
+  line-height: 101px;
+}
+
+/* Override line-height so placeholder doesn't sit at the bottom */
+.form-input::placeholder,
+.form-textarea::placeholder {
+  line-height: normal;
+  color: rgba(0, 0, 0, 0.30);
+}
+
+/* Use padding for vertical centering instead of line-height trick */
+.form-input {
+  line-height: normal;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.form-textarea {
+  height: 101px;
+  padding: 28px 24px;
+  resize: vertical;
+  min-height: 101px;
+  line-height: 1.5;
+}
+
+/* ── Focus state ── */
+.form-input:focus,
+.form-textarea:focus {
+  background: rgba(217, 217, 217, 0.95);
+  border-color: var(--color-crimson);
+  box-shadow: 0 0 0 3px rgba(178, 34, 34, 0.12);
+}
+
+/* ── Hover state ── */
+.form-input:hover:not(:focus),
+.form-textarea:hover:not(:focus) {
+  background: rgba(217, 217, 217, 0.90);
+}
+
+/* ── Submit button ── */
+.form-submit {
+  margin-top: 8px;
+  width: 100%;
+  height: 56px;
+  background: var(--color-crimson);
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: background var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  box-shadow: var(--shadow-btn);
+  letter-spacing: 0.01em;
+}
+
+.form-submit:hover {
+  background: var(--color-crimson-dark);
+  box-shadow: 0 12px 28px rgba(178, 34, 34, 0.40);
+  transform: translateY(-2px);
+}
+
+.form-submit:active {
+  transform: translateY(0);
+}
+
+/* ── Success / Error message ── */
+.form-message {
+  display: none;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.form-message.success {
+  display: block;
+  background: rgba(34, 139, 34, 0.10);
+  color: #226b22;
+  border: 1px solid rgba(34, 139, 34, 0.25);
+}
+
+.form-message.error {
+  display: block;
+  background: rgba(178, 34, 34, 0.08);
+  color: var(--color-crimson);
+  border: 1px solid rgba(178, 34, 34, 0.20);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .hero {
+    height: 70vw;
+    min-height: 320px;
+  }
+
+  .hero__headline {
+    font-size: clamp(28px, 8vw, 42px);
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,156 @@
+/* ============================================
+   HOME PAGE STYLES — index.css
+   Imports theme.css; add only page-specific rules here.
+   ============================================ */
+
+/* ── Hero ── */
+.hero {
+  position: relative;
+  width: 100%;
+  height: clamp(480px, 55vw, 713px);
+  margin-top: 0;           /* sits just below fixed nav */
+  overflow: hidden;
+  background: #1a0505;
+}
+
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  /* deepen the image so headline pops */
+  filter: brightness(0.75);
+}
+
+/* warm overlay matching the orange-sky in the reference */
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(180, 60, 0, 0.30) 0%,
+    rgba(20, 5, 5, 0.55) 100%
+  );
+}
+
+.hero__content {
+  position: absolute;
+  bottom: clamp(40px, 8%, 100px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 800px;
+  text-align: center;
+}
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero);
+  font-weight: 700;
+  color: var(--color-white);
+  text-transform: uppercase;
+  line-height: 1.21;
+  letter-spacing: 0.02em;
+  text-shadow: 0 4px 32px rgba(0,0,0,0.50);
+
+  /* entrance animation */
+  animation: heroIn 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes heroIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Intro strip (navy bar behind hero) ── */
+.intro-strip {
+  background: var(--color-navy-bg);
+  height: 535px;
+  position: absolute;
+  top: var(--nav-height);
+  left: 0; right: 0;
+  z-index: -1;   /* sits behind hero image */
+}
+
+/* ── Women Strike Section ── */
+.strike-section {
+  padding-block: var(--section-gap);
+}
+
+.strike-section__header {
+  padding-inline: var(--gutter);
+  max-width: var(--max-width);
+  margin-inline: auto;
+  margin-bottom: clamp(28px, 4vw, 48px);
+}
+
+/* ── Strike Grid ── */
+.strike-grid {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Card hover — lift + red shadow */
+.strike-card {
+  display: block;
+  cursor: pointer;
+}
+
+.strike-card .card {
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+}
+
+.strike-card:hover .card {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(178, 34, 34, 0.18);
+}
+
+.strike-card .card__image {
+  background: var(--color-gray-card);
+  /* placeholder shimmer */
+  background-image: linear-gradient(
+    90deg,
+    #d9d9d9 25%,
+    #e8e8e8 50%,
+    #d9d9d9 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Stagger each card's reveal */
+.strike-card:nth-child(1)  { animation-delay: 0.05s; }
+.strike-card:nth-child(2)  { animation-delay: 0.10s; }
+.strike-card:nth-child(3)  { animation-delay: 0.15s; }
+.strike-card:nth-child(4)  { animation-delay: 0.20s; }
+.strike-card:nth-child(5)  { animation-delay: 0.25s; }
+.strike-card:nth-child(6)  { animation-delay: 0.30s; }
+.strike-card:nth-child(7)  { animation-delay: 0.35s; }
+.strike-card:nth-child(8)  { animation-delay: 0.40s; }
+.strike-card:nth-child(9)  { animation-delay: 0.45s; }
+.strike-card:nth-child(10) { animation-delay: 0.50s; }
+.strike-card:nth-child(11) { animation-delay: 0.55s; }
+.strike-card:nth-child(12) { animation-delay: 0.60s; }
+.strike-card:nth-child(13) { animation-delay: 0.65s; }
+.strike-card:nth-child(14) { animation-delay: 0.70s; }
+.strike-card:nth-child(15) { animation-delay: 0.75s; }
+
+/* ── Responsive tweaks ── */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vw;
+    min-height: 320px;
+  }
+
+  .hero__headline {
+    font-size: clamp(28px, 8vw, 42px);
+  }
+}

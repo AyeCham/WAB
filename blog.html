@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – Women Alliance Burma</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Global theme (shared across every page) -->
+  <link rel="stylesheet" href="theme.css" />
+
+  <!-- Blog page specific styles -->
+  <link rel="stylesheet" href="blog.css" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <a href="index.html" class="navbar__logo" aria-label="Women Alliance Burma – Home">
+        <img
+          src="assets/WAB logo 1.png"
+          alt="Women Alliance Burma logo"
+          width="86" height="86"
+          onerror="this.style.background='#B22222'"
+        />
+      </a>
+
+      <nav class="navbar__nav" aria-label="Primary navigation">
+        <a href="index.html"            class="navbar__link">Home</a>
+        <a href="about.html"            class="navbar__link">About us</a>
+        <a href="revolution-voice.html" class="navbar__link">Revolution Voice</a>
+        <a href="blog.html"             class="navbar__link active">Blog</a>
+      </nav>
+
+      <div class="navbar__cta">
+        <a href="contact.html" class="btn btn--primary">Contact Us</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════ -->
+  <main class="page-content">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-label="Hero banner">
+      <img
+        class="hero__bg"
+        src="assets/WABCV.png"
+        alt="Women marching during Myanmar Spring Revolution"
+      />
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <h1 class="hero__headline">"We, Women Revolt."</h1>
+      </div>
+    </section>
+
+    <!-- ── BLOG SECTION ── -->
+    <section class="blog-section" aria-labelledby="blog-heading">
+      <div class="blog-section__inner">
+
+        <!-- Top bar: heading + search -->
+        <div class="blog-topbar">
+          <h2 id="blog-heading" class="blog-heading">Blog</h2>
+
+          <div class="blog-search" role="search">
+            <label for="search-input" class="sr-only">Search articles</label>
+            <input
+              id="search-input"
+              class="blog-search__input"
+              type="search"
+              placeholder="Search Articles"
+              aria-label="Search articles"
+            />
+            <!-- Search icon (inline SVG) -->
+            <svg class="blog-search__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Subheading -->
+        <p class="blog-subheading">
+          Stories, testimonials, and voices from the frontlines of the Myanmar
+          Spring Revolution. Women Alliance Burma amplifies the voices of women
+          leading the resistance.
+        </p>
+
+        <!-- Filter pills -->
+        <div class="blog-filters" role="group" aria-label="Filter articles by category">
+          <button class="blog-filter-btn active" data-filter="all">All</button>
+          <button class="blog-filter-btn" data-filter="news">News</button>
+          <button class="blog-filter-btn" data-filter="stories">Stories</button>
+          <button class="blog-filter-btn" data-filter="advocacy">Advocacy</button>
+          <button class="blog-filter-btn" data-filter="events">Events</button>
+        </div>
+
+        <!-- ── FEATURED POST ── -->
+        <article class="featured-post reveal" aria-label="Featured post">
+
+          <div class="featured-post__image-wrap">
+            <!-- Replace with your featured image -->
+            <img
+              class="featured-post__image"
+              src="assets/blog/featured-post.jpg"
+              alt="Women at the Forefront"
+              loading="lazy"
+            />
+            <span class="featured-post__label">Featured Post</span>
+          </div>
+
+          <div class="featured-post__body">
+            <p class="featured-post__category">Stories</p>
+            <h3 class="featured-post__title">
+              Women at the Forefront:<br/>
+              Stories from the Myanmar Spring Revolution
+            </h3>
+            <p class="featured-post__excerpt">
+              For over three years, women across Myanmar have led strike movements,
+              marched in the streets, and risked their lives to fight for democracy
+              and freedom from military rule.
+            </p>
+            <div class="featured-post__meta">
+              <span>April 2, 2026</span>
+              <span>3 min read</span>
+            </div>
+            <a href="blog-post.html" class="featured-post__cta">Read More</a>
+          </div>
+
+        </article>
+
+        <!-- ── BLOG CARD GRID ── -->
+        <div class="blog-grid" id="blog-grid">
+
+          <!-- Card 1 -->
+          <article class="blog-card reveal" data-category="news">
+            <div class="blog-card__thumb">
+              <img src="assets/blog/post-1.jpg" alt="WAB Delegation at UN Conference" loading="lazy" />
+              <span class="blog-card__pill">News</span>
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">
+                WAB Delegation Attends UN Women's Conference 2026
+              </h3>
+              <p class="blog-card__excerpt">
+                Representatives from Women Alliance Burma participated in the annual
+                UN conference to advocate for recognition of Myanmar women's role
+                in the resistance.
+              </p>
+              <p class="blog-card__meta">Mar 15, 2026 · 4 min read</p>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="blog-card reveal" data-category="news">
+            <div class="blog-card__thumb">
+              <img src="assets/blog/post-2.jpg" alt="WAB Delegation at UN Conference" loading="lazy" />
+              <span class="blog-card__pill">News</span>
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">
+                WAB Delegation Attends UN Women's Conference 2026
+              </h3>
+              <p class="blog-card__excerpt">
+                Representatives from Women Alliance Burma participated in the annual
+                UN conference to advocate for recognition of Myanmar women's role
+                in the resistance.
+              </p>
+              <p class="blog-card__meta">Mar 15, 2026 · 4 min read</p>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="blog-card reveal" data-category="news">
+            <div class="blog-card__thumb">
+              <img src="assets/blog/post-3.jpg" alt="WAB Delegation at UN Conference" loading="lazy" />
+              <span class="blog-card__pill">News</span>
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">
+                WAB Delegation Attends UN Women's Conference 2026
+              </h3>
+              <p class="blog-card__excerpt">
+                Representatives from Women Alliance Burma participated in the annual
+                UN conference to advocate for recognition of Myanmar women's role
+                in the resistance.
+              </p>
+              <p class="blog-card__meta">Mar 15, 2026 · 4 min read</p>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="blog-card reveal" data-category="news">
+            <div class="blog-card__thumb">
+              <img src="assets/blog/post-4.jpg" alt="WAB Delegation at UN Conference" loading="lazy" />
+              <span class="blog-card__pill">News</span>
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">
+                WAB Delegation Attends UN Women's Conference 2026
+              </h3>
+              <p class="blog-card__excerpt">
+                Representatives from Women Alliance Burma participated in the annual
+                UN conference to advocate for recognition of Myanmar women's role
+                in the resistance.
+              </p>
+              <p class="blog-card__meta">Mar 15, 2026 · 4 min read</p>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="blog-card reveal" data-category="news">
+            <div class="blog-card__thumb">
+              <img src="assets/blog/post-5.jpg" alt="WAB Delegation at UN Conference" loading="lazy" />
+              <span class="blog-card__pill">News</span>
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">
+                WAB Delegation Attends UN Women's Conference 2026
+              </h3>
+              <p class="blog-card__excerpt">
+                Representatives from Women Alliance Burma participated in the annual
+                UN conference to advocate for recognition of Myanmar women's role
+                in the resistance.
+              </p>
+              <p class="blog-card__meta">Mar 15, 2026 · 4 min read</p>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="blog-card reveal" data-category="news">
+            <div class="blog-card__thumb">
+              <img src="assets/blog/post-6.jpg" alt="WAB Delegation at UN Conference" loading="lazy" />
+              <span class="blog-card__pill">News</span>
+            </div>
+            <div class="blog-card__body">
+              <h3 class="blog-card__title">
+                WAB Delegation Attends UN Women's Conference 2026
+              </h3>
+              <p class="blog-card__excerpt">
+                Representatives from Women Alliance Burma participated in the annual
+                UN conference to advocate for recognition of Myanmar women's role
+                in the resistance.
+              </p>
+              <p class="blog-card__meta">Mar 15, 2026 · 4 min read</p>
+            </div>
+          </article>
+
+        </div><!-- /.blog-grid -->
+
+      </div><!-- /.blog-section__inner -->
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+
+    <div class="footer__inner">
+
+      <div class="footer__brand">
+        <p class="footer__brand-tagline">
+          Our vision is to provide convenience and help increase your insights.
+        </p>
+        <div class="footer__socials-icons" aria-label="Social media links">
+          <a href="https://facebook.com"  class="footer__icon" aria-label="Facebook">f</a>
+          <a href="https://twitter.com"   class="footer__icon" aria-label="Twitter">𝕏</a>
+          <a href="https://discord.com"   class="footer__icon" aria-label="Discord">d</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-head">About</p>
+        <nav class="footer__col-links" aria-label="About links">
+          <a href="#">How it works</a>
+          <a href="#">Featured</a>
+          <a href="#">Partnership</a>
+          <a href="#">Business Relation</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-head">Community</p>
+        <nav class="footer__col-links" aria-label="Community links">
+          <a href="#">Events</a>
+          <a href="#">Blog</a>
+          <a href="#">Podcast</a>
+          <a href="#">Invite a friend</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-head">Socials</p>
+        <nav class="footer__col-links" aria-label="Social links">
+          <a href="https://discord.com"   target="_blank" rel="noopener">Discord</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://twitter.com"   target="_blank" rel="noopener">Twitter</a>
+          <a href="https://facebook.com"  target="_blank" rel="noopener">Facebook</a>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">©2026 Seik Kuu Maker space. All rights reserved</span>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="#">Privacy &amp; Policy</a>
+        <a href="#">Terms &amp; Condition</a>
+      </nav>
+    </div>
+
+  </footer>
+
+  <!-- ════════════════════════════════════════
+       SCRIPTS
+  ════════════════════════════════════════ -->
+  <script>
+    /* ── Navbar scroll shadow ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* ── Scroll-reveal ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    /* ── Filter pills ── */
+    const filterBtns = document.querySelectorAll('.blog-filter-btn');
+    const blogCards  = document.querySelectorAll('.blog-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active state
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        blogCards.forEach(card => {
+          const match = filter === 'all' || card.dataset.category === filter;
+          card.style.display = match ? '' : 'none';
+        });
+      });
+    });
+
+    /* ── Live search ── */
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase().trim();
+      blogCards.forEach(card => {
+        const text = card.textContent.toLowerCase();
+        card.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  </script>
+
+</body>
+</html>

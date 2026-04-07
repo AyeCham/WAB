@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revolution Voice – Women Alliance Burma</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Global theme (shared across every page) -->
+  <link rel="stylesheet" href="theme.css" />
+
+  <!-- Revolution Voice page specific styles -->
+  <link rel="stylesheet" href="revolution-voice.css" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <a href="index.html" class="navbar__logo" aria-label="Women Alliance Burma – Home">
+        <img
+          src="assets/WAB logo 1.png"
+          alt="Women Alliance Burma logo"
+          width="86" height="86"
+          onerror="this.style.background='#B22222'"
+        />
+      </a>
+
+      <nav class="navbar__nav" aria-label="Primary navigation">
+        <a href="index.html"            class="navbar__link">Home</a>
+        <a href="about.html"            class="navbar__link">About us</a>
+        <a href="revolution-voice.html" class="navbar__link active">Revolution Voice</a>
+        <a href="blog.html"             class="navbar__link">Blog</a>
+      </nav>
+
+      <div class="navbar__cta">
+        <a href="contact.html" class="btn btn--primary">Contact Us</a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════
+       MAIN CONTENT
+  ════════════════════════════════════════ -->
+  <main class="page-content">
+
+    <!-- ── HERO ── -->
+    <section class="hero" aria-label="Hero banner">
+      <img
+        class="hero__bg"
+        src="assets/WABCV.png"
+        alt="Women marching during Myanmar Spring Revolution"
+      />
+      <div class="hero__overlay" aria-hidden="true"></div>
+      <div class="hero__content">
+        <h1 class="hero__headline">"We, Women Revolt."</h1>
+      </div>
+    </section>
+
+    <!-- ── REVOLUTION VOICES ── -->
+    <section class="voices-section" aria-labelledby="voices-heading">
+
+      <div class="voices-section__header">
+        <h2 id="voices-heading" class="voices-heading">Revolution Voices</h2>
+        <p class="voices-subheading">
+          Stories, testimonials, and voices from the frontlines of the Myanmar
+          Spring Revolution. Women Alliance Burma amplifies the voices of women
+          leading the resistance.
+        </p>
+      </div>
+
+      <div class="voices-grid-wrapper">
+        <div class="voices-grid">
+
+          <!-- ── Row 1 ── -->
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group.png"
+                alt="Aye Myint Aung Aung from Mandalay"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "Women joined the frontline of the revolution to break male chauvinism
+              and false norms together with the dictatorship."
+              <br/>— Aye Myint Aung Aung (Mandalay)
+            </p>
+          </article>
+
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (1).png"
+                alt="Chan from Mandalay"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "We must end all dictatorships in this revolution."
+              <br/>— Chan (Mandalay)
+            </p>
+          </article>
+
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (2).png"
+                alt="Chaw Su San from Monywa"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "Even if we lose our lives, long live justice and freedom."
+              <br/>— Chaw Su San (Monywa)
+            </p>
+          </article>
+
+          <!-- ── Row 2 ── -->
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (3).png"
+                alt="Ei San from Kalay"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "I will never loosen my clenched fist until the revolution is over."
+              <br/>— Ei San (Kalay)
+            </p>
+          </article>
+
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (4).png"
+                alt="Khin Moe Thae from Wat Lat"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "The military coup must be the last in our time, not for the next generation."
+              <br/>— Khin Moe Thae (Wat Lat)
+            </p>
+          </article>
+
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (5).png"
+                alt="Lynn Lynn from Yangon"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "Spring Revolution must win. Together we march toward a new nation
+              built on freedom and equality."
+              <br/>— Lynn Lynn (Yangon)
+            </p>
+          </article>
+
+          <!-- ── Row 3 ── -->
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (6).png"
+                alt="May Zin Mon from Monywa – Amyint Road"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "For the lives paid and the futures lost, women will continue this
+              fight until the end."
+              <br/>— May Zin Mon (Monywa – Amyint Road)
+            </p>
+          </article>
+
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (7).png"
+                alt="Nu Nu Khaing from Depayin"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "The fear of dying is not as big as the fear of being oppressed
+              under a dictator."
+              <br/>— Nu Nu Khaing (Depayin)
+            </p>
+          </article>
+
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (8).png"
+                alt="Pan Pan"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "We want to live in a place where everyone recognizes injustice as injustice."
+              <br/>— Pan Pan
+            </p>
+          </article>
+
+          <!-- ── Row 4 ── -->
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (9).png"
+                alt="Phoo Pwint Wai from West of Chindwin River"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "We will never kneel under military boots. The revolution must succeed."
+              <br/>— Phoo Pwint Wai (West of Chindwin River)
+            </p>
+          </article>
+
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (10).png"
+                alt="Su Wai Zin from Ayartaw"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "I will fight until the dictatorship falls and advocate for women's rights."
+              <br/>— Su Wai Zin (Ayartaw)
+            </p>
+          </article>
+
+          <article class="voice-card reveal">
+            <div class="voice-card__image-wrap">
+              <img
+                src="assets/Mask group (11).png"
+                alt="Thaw Thaw from Yangon"
+                loading="lazy"
+                onload="this.closest('.voice-card__image-wrap').classList.add('loaded')"
+              />
+            </div>
+            <p class="voice-card__quote">
+              "We will not step back until the dictator falls."
+              <br/>— Thaw Thaw (Yangon)
+            </p>
+          </article>
+
+        </div><!-- /.voices-grid -->
+      </div><!-- /.voices-grid-wrapper -->
+
+    </section>
+
+  </main>
+
+  <!-- ════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+
+    <div class="footer__inner">
+
+      <div class="footer__brand">
+        <p class="footer__brand-tagline">
+          Our vision is to provide convenience and help increase your insights.
+        </p>
+        <div class="footer__socials-icons" aria-label="Social media links">
+          <a href="https://facebook.com"  class="footer__icon" aria-label="Facebook">f</a>
+          <a href="https://twitter.com"   class="footer__icon" aria-label="Twitter">𝕏</a>
+          <a href="https://discord.com"   class="footer__icon" aria-label="Discord">d</a>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-head">About</p>
+        <nav class="footer__col-links" aria-label="About links">
+          <a href="#">How it works</a>
+          <a href="#">Featured</a>
+          <a href="#">Partnership</a>
+          <a href="#">Business Relation</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-head">Community</p>
+        <nav class="footer__col-links" aria-label="Community links">
+          <a href="#">Events</a>
+          <a href="#">Blog</a>
+          <a href="#">Podcast</a>
+          <a href="#">Invite a friend</a>
+        </nav>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-head">Socials</p>
+        <nav class="footer__col-links" aria-label="Social links">
+          <a href="https://discord.com"   target="_blank" rel="noopener">Discord</a>
+          <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://twitter.com"   target="_blank" rel="noopener">Twitter</a>
+          <a href="https://facebook.com"  target="_blank" rel="noopener">Facebook</a>
+        </nav>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <span class="footer__copy">©2026 Seik Kuu Maker space. All rights reserved</span>
+      <nav class="footer__legal" aria-label="Legal links">
+        <a href="#">Privacy &amp; Policy</a>
+        <a href="#">Terms &amp; Condition</a>
+      </nav>
+    </div>
+
+  </footer>
+
+  <!-- ════════════════════════════════════════
+       SCRIPTS
+  ════════════════════════════════════════ -->
+  <script>
+    /* Navbar scroll shadow */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 10);
+    }, { passive: true });
+
+    /* Scroll-reveal for voice cards */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
